@@ -1,0 +1,30 @@
+name: Create Release (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name for the release (e.g. v1.0.0)'
+        required: true
+      release_name:
+        description: 'Release title'
+        required: false
+      body:
+        description: 'Release notes / description'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ inputs.tag }}
+          release_name: ${{ inputs.release_name || inputs.tag }}
+          body: ${{ inputs.body || '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

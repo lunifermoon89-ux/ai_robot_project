@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\owner\OneDrive\Desktop\ai_robot_project\serve.py", line 1, in <module>
+    from app import app
+  File "C:\Users\owner\OneDrive\Desktop\ai_robot_project\app.py", line 1, in <module>
+    from flask import Flask, request, jsonify, send_from_directory
+ModuleNotFoundError: No module named 'flask'

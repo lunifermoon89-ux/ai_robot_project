@@ -1,0 +1,5 @@
+/.venv/
+traffic_predictor_model.pkl
+__pycache__/
+.pytest_cache/
+*.pyc

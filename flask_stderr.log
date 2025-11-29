@@ -1,0 +1,4 @@
+INFO:ai_robot_project:Model loaded at startup
+INFO:waitress:Serving on http://0.0.0.0:8080
+INFO:ai_robot_project:Predicted score for 400.0: 0.0033335127705823478
+INFO:ai_robot_project:Predicted score for 400.0: 0.0033335127705823478
